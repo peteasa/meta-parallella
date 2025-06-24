@@ -1,9 +1,15 @@
 include linux-parallella.inc
 
 LINUX_VERSION = "5.10"
-KBRANCH = "parallella-linux-2022.1"
-SRCREV = "c4a1af3187b0320fd0b87eb3806f0afba352c414"
-SRC_URI = "git://github.com/olajep/parallella-linux.git;protocol=https;branch=${KBRANCH}"
+KBRANCH = "y2024.2"
+SRCREV = "c7f4a685860d78195fb5006f1d2d6f538d238bf2"
+SRC_URI = "git://github.com/peteasa/parallella-linux.git;protocol=https;branch=${KBRANCH}"
+
+# see https://lore.kernel.org/linux-arm-kernel/20211018140735.3714254-1-arnd@kernel.org/
+FILESEXTRAPATHS:prepend := "${THISDIR}/linux-parallella/5.10:"
+SRC_URI:append = " \
+    file://0001-drop_cc_option.patch \
+    "
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
 
