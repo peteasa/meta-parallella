@@ -27,6 +27,7 @@ PREFERRED_PROVIDER_virtual/kernel ?= "linux-parallella"
 PREFERRED_PROVIDER_virtual/bootloader ?= "u-boot"
 
 EXTRA_IMAGEDEPENDS += "virtual/bootloader"
+EXTRA_IMAGEDEPENDS += "virtual/dtb"
 
 IMAGE_FSTYPES ?= "tar.gz cpio.gz.u-boot"
 

@@ -17,6 +17,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}/${LINUX_VERSION}:"
 
 KBUILD_DEFCONFIG = "parallella_defconfig"
 
-KERNEL_DEVICETREE = "zynq-parallella.dtb"
 KERNEL_DEVICETREE:parallella = "zynq-parallella-headless.dtb"
 KERNEL_DEVICETREE:parallella-hdmi = "zynq-parallella.dtb"
+
+PROVIDES += "virtual/dtb"
