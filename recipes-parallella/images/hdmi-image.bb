@@ -36,8 +36,21 @@ inherit core-image
 # Specify to write image as a tar.gz file
 IMAGE_FSTYPES = "tar.gz"
 
-# Add kernel-dev to the image for uapi/linux/epiphany.h so that e-hal can be built (TODO is this now not needed?)
+# Install kernel-modules and capability to build modules
+IMAGE_INSTALL += " \
+    kernel-modules \
+    kmod \
+"
+
+# Add kernel-dev to the image so that modules can be built on target
 IMAGE_INSTALL += " \
 	kernel-dev \
 	kernel-devsrc \
+"
+
+# for debugging could also add systemtap
+IMAGE_INSTALL += " \
+    dtc \
+    i2c-tools \
+    devmem2 \
 "
