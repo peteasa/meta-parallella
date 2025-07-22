@@ -20,7 +20,4 @@ KBUILD_DEFCONFIG = "parallella_defconfig"
 #KERNEL_DEVICETREE = "zynq-parallella.dtb"
 #KERNEL_DEVICETREE:parallella = "zynq-parallella-headless.dtb"
 #KERNEL_DEVICETREE:parallella-hdmi = "zynq-parallella.dtb"
-KERNEL_DEVICETREE = "zynq-parallella_7010.dtb"
-KERNEL_DEVICETREE:parallella = "zynq-parallella-headless_7010.dtb"
-KERNEL_DEVICETREE:parallella-hdmi = "zynq-parallella_7010.dtb"
 

@@ -16,7 +16,7 @@ KERNEL_EXTRA_ARGS += "LOADADDR=${UBOOT_ENTRYPOINT}"
 
 # U-Boot
 UBOOT_MACHINE= "xilinx_zynq_virt_defconfig"
-UBOOT_DEVICE_TREE = "zynq-parallella_7010.dtb"
+UBOOT_DEVICE_TREE = "zynq-parallella"
 UBOOT_SUFFIX = "img"
 UBOOT_ENTRYPOINT = "0x8000"
 UBOOT_LOADADDRESS = "0x8000"
