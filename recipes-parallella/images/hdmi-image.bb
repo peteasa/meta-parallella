@@ -54,3 +54,9 @@ IMAGE_INSTALL += " \
     i2c-tools \
     devmem2 \
 "
+
+# populate the sdk with epiphany-elf-* tools
+TOOLCHAIN_HOST_TASK += "\
+    packagegroup-nativesdk-epiphany-elf-buildessentialfromsource \
+    packagegroup-nativesdk-epiphany-sdk-buildessentialfromsource \
+"
